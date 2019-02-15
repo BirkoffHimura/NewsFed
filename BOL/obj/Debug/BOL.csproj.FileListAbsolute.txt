@@ -1,0 +1,40 @@
+c:\users\testo\documents\visual studio 2015\Projects\TestOne\BOL\obj\Debug\BOL.csprojResolveAssemblyReference.cache
+c:\users\testo\documents\visual studio 2015\Projects\TestOne\BOL\bin\Debug\BOL.dll.config
+c:\users\testo\documents\visual studio 2015\Projects\TestOne\BOL\bin\Debug\BOL.dll
+c:\users\testo\documents\visual studio 2015\Projects\TestOne\BOL\bin\Debug\BOL.pdb
+c:\users\testo\documents\visual studio 2015\Projects\TestOne\BOL\bin\Debug\EntityFramework.dll
+c:\users\testo\documents\visual studio 2015\Projects\TestOne\BOL\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\testo\documents\visual studio 2015\Projects\TestOne\BOL\bin\Debug\EntityFramework.xml
+c:\users\testo\documents\visual studio 2015\Projects\TestOne\BOL\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\testo\documents\visual studio 2015\Projects\TestOne\BOL\obj\Debug\BOL.dll
+c:\users\testo\documents\visual studio 2015\Projects\TestOne\BOL\obj\Debug\BOL.pdb
+c:\users\testo\documents\visual studio 2015\Projects\TestOne\BOL\obj\Debug\BOL.Migrations.AddUsersTable.resources
+c:\users\testo\documents\visual studio 2015\Projects\TestOne\BOL\obj\Debug\BOL.csproj.GenerateResource.Cache
+c:\users\testo\documents\visual studio 2015\Projects\TestOne\BOL\obj\Debug\BOL.Migrations.UpdateUsersTableIncludeAdminAcctAndAllowPostColumns.resources
+c:\users\testo\documents\visual studio 2015\Projects\TestOne\BOL\obj\Debug\BOL.Migrations.AddUserSubscriptionTableWithRelationsships.resources
+c:\users\testo\documents\visual studio 2015\Projects\TestOne\BOL\obj\Debug\BOL.Migrations.AddProfilePicColumnToUsersTable.resources
+c:\users\testo\documents\visual studio 2015\Projects\TestOne\BOL\obj\Debug\BOL.Migrations.AddNewsFeedItemsTableWithRelationshipToUsersTable.resources
+c:\users\testo\documents\visual studio 2015\Projects\TestOne\BOL\obj\Debug\BOL.Migrations.addCreateDateToNewsFeedItemTable.resources
+c:\users\testo\documents\visual studio 2015\Projects\TestOne\BOL\obj\Debug\BOL.Migrations.addNewsFeedItemCommentsTableWithRelationsships.resources
+C:\Users\Testo\Documents\Visual Studio 2015\Projects\TestOne\BOL\obj\Debug\BOL.Migrations.AddUniqueConstraintOnUserSubscriptionTable.resources
+C:\Users\Testo\Documents\Visual Studio 2015\Projects\TestOne\BOL\obj\Debug\BOL.Migrations.AddMaxLengthToComment_BodyColumnOnNewsFeedItemCommentsTable.resources
+G:\My Projects\NFed\TestOne\BOL\bin\Debug\BOL.dll.config
+G:\My Projects\NFed\TestOne\BOL\bin\Debug\BOL.dll
+G:\My Projects\NFed\TestOne\BOL\bin\Debug\BOL.pdb
+G:\My Projects\NFed\TestOne\BOL\bin\Debug\EntityFramework.dll
+G:\My Projects\NFed\TestOne\BOL\bin\Debug\EntityFramework.SqlServer.dll
+G:\My Projects\NFed\TestOne\BOL\bin\Debug\EntityFramework.xml
+G:\My Projects\NFed\TestOne\BOL\bin\Debug\EntityFramework.SqlServer.xml
+G:\My Projects\NFed\TestOne\BOL\obj\Debug\BOL.csprojResolveAssemblyReference.cache
+G:\My Projects\NFed\TestOne\BOL\obj\Debug\BOL.Migrations.AddUsersTable.resources
+G:\My Projects\NFed\TestOne\BOL\obj\Debug\BOL.Migrations.UpdateUsersTableIncludeAdminAcctAndAllowPostColumns.resources
+G:\My Projects\NFed\TestOne\BOL\obj\Debug\BOL.Migrations.AddUserSubscriptionTableWithRelationsships.resources
+G:\My Projects\NFed\TestOne\BOL\obj\Debug\BOL.Migrations.AddProfilePicColumnToUsersTable.resources
+G:\My Projects\NFed\TestOne\BOL\obj\Debug\BOL.Migrations.AddNewsFeedItemsTableWithRelationshipToUsersTable.resources
+G:\My Projects\NFed\TestOne\BOL\obj\Debug\BOL.Migrations.addCreateDateToNewsFeedItemTable.resources
+G:\My Projects\NFed\TestOne\BOL\obj\Debug\BOL.Migrations.addNewsFeedItemCommentsTableWithRelationsships.resources
+G:\My Projects\NFed\TestOne\BOL\obj\Debug\BOL.Migrations.AddUniqueConstraintOnUserSubscriptionTable.resources
+G:\My Projects\NFed\TestOne\BOL\obj\Debug\BOL.Migrations.AddMaxLengthToComment_BodyColumnOnNewsFeedItemCommentsTable.resources
+G:\My Projects\NFed\TestOne\BOL\obj\Debug\BOL.csproj.GenerateResource.Cache
+G:\My Projects\NFed\TestOne\BOL\obj\Debug\BOL.dll
+G:\My Projects\NFed\TestOne\BOL\obj\Debug\BOL.pdb

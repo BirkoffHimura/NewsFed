@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Website to share news and stay up to date" />
+    <meta name="keywords" content="News feed" />
+    <title>@ViewBag.Title - NewsFed</title>
+    
+
+    <!-- Stylesheets
+    ================================================= -->
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="~/Content/style.css" type="text/css"/>
+    <link rel="stylesheet" href="~/Content/ionicons.min.css" type="text/css"/>
+    <link rel="stylesheet" href="~/Content/font-awesome.min.css" type="text/css"/>
+    <link href="~/Conten/emoji.css" rel="stylesheet" type="text/css"/>
+
+    <!--Google Font-->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,700i" rel="stylesheet">
+
+    <!--Favicon-->
+    <link rel="shortcut icon" type="image/png" href="images/fav.png" />
+
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+</head>
+<body>
+    <script src="~/Scripts/angular.js"></script>
+    <script src="~/Scripts/AngFrontEnd.js"></script>
+    <div ng-app="NFedApp">
+        <div ng-controller="NewsFeedItems">
+            <div ng-controller="UserProfileBoxController">
+                <header id="header">
+                    <nav class="navbar navbar-inverse navbar-fixed-top menu">
+                        <div class="container">
+
+                            <!-- Brand and toggle get grouped for better mobile display -->
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                <a class="navbar-brand" href="index-register.html"><img src="~/images/logo-black.png" alt="logo" /></a>
+                            </div>
+
+                            <!-- Collect the nav links, forms, and other content for toggling -->
+                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                <ul class="nav navbar-nav navbar-right main-menu">
+                                    @if (User.Identity.IsAuthenticated)
+{
+                                        <li class="dropdown">@Html.ActionLink("News Feed", "Index", new { Controller = "Home", area = "Common" })</li>
+                                        <li class="dropdown">@Html.ActionLink("Profile Edit", "Index", new { Controller = "Profile", area = "Security" })</li>
+                                        <li class="dropdown">@Html.ActionLink("Logoff", "Logoff", new { Controller = "Login", area = "Security" })</li>
+}
+else
+{
+                                        <li class="dropdown">@Html.ActionLink("Login", "Index", new { Controller = "Login", area = "Security" })</li>
+                                        <li class="dropdown">@Html.ActionLink("Register", "Index", new { Controller = "Register", area = "Security" })</li>
+}
+                                </ul>
+                                <form class="navbar-form navbar-right hidden-sm">
+                                    <div class="form-group">
+                                        <i class="icon ion-android-search"></i>
+                                        <input type="text" class="form-control" ng-keypress="NewsFeedItemSearch($event)" id="NewsFeedItemSearchCriteria" placeholder="Search News feed items">
+                                    </div>
+                                </form>
+                            </div><!-- /.navbar-collapse -->
+                        </div><!-- /.container -->
+                    </nav>
+                </header>
+
+                <div id="page-contents">
+                    <div class="container">
+                        @RenderBody()
+                        <hr />
+                        <footer>
+                            <p>&copy; @DateTime.Now.Year - NewsFed</p>
+                        </footer>
+                    </div>
+                </div>
+                <!--preloader-->
+                <div id="spinner-wrapper">
+                    <div class="spinner"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTMXfmDn0VlqWIyoOxK8997L-amWbUPiQ&callback=initMap"></script>
+    <script src="~/Scripts/jquery-3.1.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery.sticky-kit.min.js"></script>
+    <script src="~/Scripts/jquery.scrollbar.min.js"></script>
+    <script src="~/Scripts/script.js"></script>
+    <script src="~/Scripts/dirPaginate.js"></script>
+</body>
+</html>

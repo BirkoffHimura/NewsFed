@@ -1,0 +1,144 @@
+c:\users\testo\documents\visual studio 2015\Projects\TestOne\NFed\bin\roslyn\csc.exe
+c:\users\testo\documents\visual studio 2015\Projects\TestOne\NFed\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+c:\users\testo\documents\visual studio 2015\Projects\TestOne\NFed\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+c:\users\testo\documents\visual studio 2015\Projects\TestOne\NFed\bin\roslyn\Microsoft.CodeAnalysis.dll
+c:\users\testo\documents\visual studio 2015\Projects\TestOne\NFed\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+c:\users\testo\documents\visual studio 2015\Projects\TestOne\NFed\bin\roslyn\Microsoft.CSharp.Core.targets
+c:\users\testo\documents\visual studio 2015\Projects\TestOne\NFed\bin\roslyn\Microsoft.VisualBasic.Core.targets
+c:\users\testo\documents\visual studio 2015\Projects\TestOne\NFed\bin\roslyn\System.Collections.Immutable.dll
+c:\users\testo\documents\visual studio 2015\Projects\TestOne\NFed\bin\roslyn\System.Reflection.Metadata.dll
+c:\users\testo\documents\visual studio 2015\Projects\TestOne\NFed\bin\roslyn\vbc.exe
+c:\users\testo\documents\visual studio 2015\Projects\TestOne\NFed\bin\roslyn\VBCSCompiler.exe
+c:\users\testo\documents\visual studio 2015\Projects\TestOne\NFed\bin\roslyn\VBCSCompiler.exe.config
+c:\users\testo\documents\visual studio 2015\Projects\TestOne\NFed\bin\NFed.dll.config
+c:\users\testo\documents\visual studio 2015\Projects\TestOne\NFed\bin\NFed.dll
+c:\users\testo\documents\visual studio 2015\Projects\TestOne\NFed\bin\NFed.pdb
+c:\users\testo\documents\visual studio 2015\Projects\TestOne\NFed\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+c:\users\testo\documents\visual studio 2015\Projects\TestOne\NFed\bin\Microsoft.Web.Infrastructure.dll
+c:\users\testo\documents\visual studio 2015\Projects\TestOne\NFed\bin\System.Web.Helpers.dll
+c:\users\testo\documents\visual studio 2015\Projects\TestOne\NFed\bin\System.Web.Mvc.dll
+c:\users\testo\documents\visual studio 2015\Projects\TestOne\NFed\bin\System.Web.Razor.dll
+c:\users\testo\documents\visual studio 2015\Projects\TestOne\NFed\bin\System.Web.Webpages.Deployment.dll
+c:\users\testo\documents\visual studio 2015\Projects\TestOne\NFed\bin\System.Web.Webpages.dll
+c:\users\testo\documents\visual studio 2015\Projects\TestOne\NFed\bin\System.Web.Webpages.Razor.dll
+c:\users\testo\documents\visual studio 2015\Projects\TestOne\NFed\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+c:\users\testo\documents\visual studio 2015\Projects\TestOne\NFed\bin\System.Web.Razor.xml
+c:\users\testo\documents\visual studio 2015\Projects\TestOne\NFed\bin\System.Web.Webpages.xml
+c:\users\testo\documents\visual studio 2015\Projects\TestOne\NFed\bin\System.Web.Webpages.Deployment.xml
+c:\users\testo\documents\visual studio 2015\Projects\TestOne\NFed\bin\System.Web.Webpages.Razor.xml
+c:\users\testo\documents\visual studio 2015\Projects\TestOne\NFed\bin\System.Web.Helpers.xml
+c:\users\testo\documents\visual studio 2015\Projects\TestOne\NFed\bin\System.Web.Mvc.xml
+c:\users\testo\documents\visual studio 2015\Projects\TestOne\NFed\obj\Debug\NFed.csprojResolveAssemblyReference.cache
+c:\users\testo\documents\visual studio 2015\Projects\TestOne\NFed\obj\Debug\NFed.dll
+c:\users\testo\documents\visual studio 2015\Projects\TestOne\NFed\obj\Debug\NFed.pdb
+c:\users\testo\documents\visual studio 2015\Projects\TestOne\NFed\bin\BOL.dll
+c:\users\testo\documents\visual studio 2015\Projects\TestOne\NFed\bin\BOL.pdb
+c:\users\testo\documents\visual studio 2015\Projects\TestOne\NFed\bin\EntityFramework.dll
+c:\users\testo\documents\visual studio 2015\Projects\TestOne\NFed\bin\EntityFramework.SqlServer.dll
+c:\users\testo\documents\visual studio 2015\Projects\TestOne\NFed\bin\EntityFramework.xml
+c:\users\testo\documents\visual studio 2015\Projects\TestOne\NFed\bin\EntityFramework.SqlServer.xml
+C:\Users\Testo\Documents\Visual Studio 2015\Projects\TestOne\NFed\bin\BLL.dll
+C:\Users\Testo\Documents\Visual Studio 2015\Projects\TestOne\NFed\bin\DAL.dll
+C:\Users\Testo\Documents\Visual Studio 2015\Projects\TestOne\NFed\bin\BLL.pdb
+C:\Users\Testo\Documents\Visual Studio 2015\Projects\TestOne\NFed\bin\DAL.pdb
+C:\Users\Testo\Documents\Visual Studio 2015\Projects\TestOne\NFed\bin\JsonLib.dll
+C:\Users\Testo\Documents\Visual Studio 2015\Projects\TestOne\NFed\bin\Newtonsoft.Json.dll
+C:\Users\Testo\Documents\Visual Studio 2015\Projects\TestOne\NFed\bin\JsonLib.pdb
+C:\Users\Testo\Documents\Visual Studio 2015\Projects\TestOne\NFed\bin\Newtonsoft.Json.pdb
+C:\Users\Testo\Documents\Visual Studio 2015\Projects\TestOne\NFed\bin\Newtonsoft.Json.xml
+G:\My Projects\NFed\TestOne\NFed\bin\roslyn\csc.exe
+G:\My Projects\NFed\TestOne\NFed\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+G:\My Projects\NFed\TestOne\NFed\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+G:\My Projects\NFed\TestOne\NFed\bin\roslyn\Microsoft.CodeAnalysis.dll
+G:\My Projects\NFed\TestOne\NFed\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+G:\My Projects\NFed\TestOne\NFed\bin\roslyn\Microsoft.CSharp.Core.targets
+G:\My Projects\NFed\TestOne\NFed\bin\roslyn\Microsoft.VisualBasic.Core.targets
+G:\My Projects\NFed\TestOne\NFed\bin\roslyn\System.Collections.Immutable.dll
+G:\My Projects\NFed\TestOne\NFed\bin\roslyn\System.Reflection.Metadata.dll
+G:\My Projects\NFed\TestOne\NFed\bin\roslyn\vbc.exe
+G:\My Projects\NFed\TestOne\NFed\bin\roslyn\VBCSCompiler.exe
+G:\My Projects\NFed\TestOne\NFed\bin\roslyn\VBCSCompiler.exe.config
+G:\My Projects\NFed\TestOne\NFed\bin\NFed.dll.config
+G:\My Projects\NFed\TestOne\NFed\bin\NFed.dll
+G:\My Projects\NFed\TestOne\NFed\bin\NFed.pdb
+G:\My Projects\NFed\TestOne\NFed\bin\BLL.dll
+G:\My Projects\NFed\TestOne\NFed\bin\BOL.dll
+G:\My Projects\NFed\TestOne\NFed\bin\EntityFramework.dll
+G:\My Projects\NFed\TestOne\NFed\bin\EntityFramework.SqlServer.dll
+G:\My Projects\NFed\TestOne\NFed\bin\JsonLib.dll
+G:\My Projects\NFed\TestOne\NFed\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+G:\My Projects\NFed\TestOne\NFed\bin\Microsoft.Web.Infrastructure.dll
+G:\My Projects\NFed\TestOne\NFed\bin\System.Web.Helpers.dll
+G:\My Projects\NFed\TestOne\NFed\bin\System.Web.Mvc.dll
+G:\My Projects\NFed\TestOne\NFed\bin\System.Web.Razor.dll
+G:\My Projects\NFed\TestOne\NFed\bin\System.Web.Webpages.Deployment.dll
+G:\My Projects\NFed\TestOne\NFed\bin\System.Web.Webpages.dll
+G:\My Projects\NFed\TestOne\NFed\bin\System.Web.Webpages.Razor.dll
+G:\My Projects\NFed\TestOne\NFed\bin\DAL.dll
+G:\My Projects\NFed\TestOne\NFed\bin\Newtonsoft.Json.dll
+G:\My Projects\NFed\TestOne\NFed\bin\BLL.pdb
+G:\My Projects\NFed\TestOne\NFed\bin\BOL.pdb
+G:\My Projects\NFed\TestOne\NFed\bin\JsonLib.pdb
+G:\My Projects\NFed\TestOne\NFed\bin\EntityFramework.xml
+G:\My Projects\NFed\TestOne\NFed\bin\EntityFramework.SqlServer.xml
+G:\My Projects\NFed\TestOne\NFed\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+G:\My Projects\NFed\TestOne\NFed\bin\System.Web.Razor.xml
+G:\My Projects\NFed\TestOne\NFed\bin\System.Web.Webpages.xml
+G:\My Projects\NFed\TestOne\NFed\bin\System.Web.Webpages.Deployment.xml
+G:\My Projects\NFed\TestOne\NFed\bin\System.Web.Webpages.Razor.xml
+G:\My Projects\NFed\TestOne\NFed\bin\System.Web.Helpers.xml
+G:\My Projects\NFed\TestOne\NFed\bin\System.Web.Mvc.xml
+G:\My Projects\NFed\TestOne\NFed\bin\DAL.pdb
+G:\My Projects\NFed\TestOne\NFed\bin\Newtonsoft.Json.pdb
+G:\My Projects\NFed\TestOne\NFed\bin\Newtonsoft.Json.xml
+G:\My Projects\NFed\TestOne\NFed\obj\Debug\NFed.csprojResolveAssemblyReference.cache
+G:\My Projects\NFed\TestOne\NFed\obj\Debug\NFed.dll
+G:\My Projects\NFed\TestOne\NFed\obj\Debug\NFed.pdb
+G:\My Projects\NFed\NewsFed\NFed\bin\roslyn\csc.exe
+G:\My Projects\NFed\NewsFed\NFed\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+G:\My Projects\NFed\NewsFed\NFed\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+G:\My Projects\NFed\NewsFed\NFed\bin\roslyn\Microsoft.CodeAnalysis.dll
+G:\My Projects\NFed\NewsFed\NFed\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+G:\My Projects\NFed\NewsFed\NFed\bin\roslyn\Microsoft.CSharp.Core.targets
+G:\My Projects\NFed\NewsFed\NFed\bin\roslyn\Microsoft.VisualBasic.Core.targets
+G:\My Projects\NFed\NewsFed\NFed\bin\roslyn\System.Collections.Immutable.dll
+G:\My Projects\NFed\NewsFed\NFed\bin\roslyn\System.Reflection.Metadata.dll
+G:\My Projects\NFed\NewsFed\NFed\bin\roslyn\vbc.exe
+G:\My Projects\NFed\NewsFed\NFed\bin\roslyn\VBCSCompiler.exe
+G:\My Projects\NFed\NewsFed\NFed\bin\roslyn\VBCSCompiler.exe.config
+G:\My Projects\NFed\NewsFed\NFed\bin\NFed.dll.config
+G:\My Projects\NFed\NewsFed\NFed\bin\NFed.dll
+G:\My Projects\NFed\NewsFed\NFed\bin\NFed.pdb
+G:\My Projects\NFed\NewsFed\NFed\bin\BLL.dll
+G:\My Projects\NFed\NewsFed\NFed\bin\BOL.dll
+G:\My Projects\NFed\NewsFed\NFed\bin\EntityFramework.dll
+G:\My Projects\NFed\NewsFed\NFed\bin\EntityFramework.SqlServer.dll
+G:\My Projects\NFed\NewsFed\NFed\bin\JsonLib.dll
+G:\My Projects\NFed\NewsFed\NFed\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+G:\My Projects\NFed\NewsFed\NFed\bin\Microsoft.Web.Infrastructure.dll
+G:\My Projects\NFed\NewsFed\NFed\bin\System.Web.Helpers.dll
+G:\My Projects\NFed\NewsFed\NFed\bin\System.Web.Mvc.dll
+G:\My Projects\NFed\NewsFed\NFed\bin\System.Web.Razor.dll
+G:\My Projects\NFed\NewsFed\NFed\bin\System.Web.Webpages.Deployment.dll
+G:\My Projects\NFed\NewsFed\NFed\bin\System.Web.Webpages.dll
+G:\My Projects\NFed\NewsFed\NFed\bin\System.Web.Webpages.Razor.dll
+G:\My Projects\NFed\NewsFed\NFed\bin\DAL.dll
+G:\My Projects\NFed\NewsFed\NFed\bin\Newtonsoft.Json.dll
+G:\My Projects\NFed\NewsFed\NFed\bin\BLL.pdb
+G:\My Projects\NFed\NewsFed\NFed\bin\BOL.pdb
+G:\My Projects\NFed\NewsFed\NFed\bin\JsonLib.pdb
+G:\My Projects\NFed\NewsFed\NFed\bin\EntityFramework.xml
+G:\My Projects\NFed\NewsFed\NFed\bin\EntityFramework.SqlServer.xml
+G:\My Projects\NFed\NewsFed\NFed\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+G:\My Projects\NFed\NewsFed\NFed\bin\System.Web.Razor.xml
+G:\My Projects\NFed\NewsFed\NFed\bin\System.Web.Webpages.xml
+G:\My Projects\NFed\NewsFed\NFed\bin\System.Web.Webpages.Deployment.xml
+G:\My Projects\NFed\NewsFed\NFed\bin\System.Web.Webpages.Razor.xml
+G:\My Projects\NFed\NewsFed\NFed\bin\System.Web.Helpers.xml
+G:\My Projects\NFed\NewsFed\NFed\bin\System.Web.Mvc.xml
+G:\My Projects\NFed\NewsFed\NFed\bin\DAL.pdb
+G:\My Projects\NFed\NewsFed\NFed\bin\Newtonsoft.Json.pdb
+G:\My Projects\NFed\NewsFed\NFed\bin\Newtonsoft.Json.xml
+G:\My Projects\NFed\NewsFed\NFed\obj\Debug\NFed.csprojResolveAssemblyReference.cache
+G:\My Projects\NFed\NewsFed\NFed\obj\Debug\NFed.dll
+G:\My Projects\NFed\NewsFed\NFed\obj\Debug\NFed.pdb

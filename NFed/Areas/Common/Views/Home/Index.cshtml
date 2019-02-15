@@ -1,0 +1,121 @@
+﻿
+@{
+    ViewBag.Title = "Home";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+  <div class="row" ng-init="refreshNews()">
+
+            <!-- Newsfeed Common Side Bar Left
+            ================================================= -->
+            <div class="col-md-3 static" ng-init="updateBoxInfo()" >
+                <div class="profile-card" ng-if="UserProfileBoxInfo.Name">
+                    <img src="~/images/acct/{{UserProfileBoxInfo.ProfilePic}}" alt="user" class="profile-photo" />
+                    <h5><a href="timeline.html" class="text-white">{{UserProfileBoxInfo.Name}}</a></h5>
+                    <a class="text-white"><i class="ion ion-android-person-add"></i> {{UserProfileBoxInfo.Followers}} followers</a>
+                </div><!--profile card ends-->
+                <ul class="nav-news-feed">
+                    <li><i class="icon ion-ios-paper"></i><div><a href="#" id="btnAllNewsfeeditems" ng-click="GetAllNewsItems()">All Newsfeed items</a></div></li>
+                    <li><i class="icon ion-ios-paper"></i><div><a href="#" id="btnMyNewsfeed" ng-click="GetMyNewsFeedItems()">My Newsfeed</a></div></li>
+                    <li><i class="icon ion-ios-people-outline"></i><div><a href="#" id="btnANewsfeeditemsSubscriptions" ng-click="GetNewsFeedItemsSubscriptions()">Subscriptions</a></div></li>
+                    <li><i class="icon ion-ios-people-outline"></i><div>@Html.ActionLink("Manage Subscriptions", "Index", new { Controller = "MySubscription", area = "Common" })</div></li>
+                </ul><!--news-feed links ends-->
+
+            </div>
+
+            <div class="col-md-7" >
+
+                <!-- Post Create Box
+                ================================================= -->
+                <div class="create-post">
+                    <div class="row">
+                        <div class="col-md-7 col-sm-7">
+                            <div class="form-group">
+                                <input type="text" id="NewsFeedItem_Title" maxlength="100" class="form-control" placeholder="Write a Title" />
+                            </div>
+                            <div class="form-group">                                
+                                <textarea name="texts" id="NewsFeedItem_Body" maxlength="500" cols="30" rows="1" class="form-control" placeholder="Write what you wish"></textarea>                                
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" id="imgUpload" ng-files="getTheFiles($files)" type="file" />
+                            </div>
+                        </div>
+                        <div class="col-md-5 col-sm-5">
+                            <div class="tools">
+                                <ul class="publishing-tools list-inline">
+                                    <li><a href="#"><i class="ion-images"></i></a></li>                                    
+                                </ul>
+                                <button class="btn btn-primary pull-right" ng-click="CreateNewsFeedItem()">Publish</button>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- Post Create Box End-->
+                <div id="loading" style="display:none;">
+                    <img src="~/images/loading.gif"/>
+                </div>
+                <!-- Post Content
+                ================================================= -->
+                <!--<div class="post-content" ng-repeat="nfil in NewsFeedItemList">-->
+                           <div class="post-content" dir-paginate="nfil in NewsFeedItemList | itemsPerPage:3">
+                               <div class="nfeeditempost">
+                                   <div class="caption">
+                                       <h4>{{nfil.Title}}</h4>
+                                   </div>
+                                   <img src="~/images/acct/{{nfil.Img}}" ng-if="nfil.Img" alt="post-image" class="img-responsive post-image" />
+                               </div>
+                               <div class="post-container">
+
+                                   <img src="~/images/acct/{{nfil.User.ProfilePic}}" alt="user" class="profile-photo-md pull-left" />
+
+                                   <div class="post-detail">
+                                       <div class="user-info">
+                                           <h5><a href="#" ng-click="GetNewsFeedItemsByUserID(nfil.User.ID)" class="profile-link">{{nfil.User.Name}}</a> </h5>
+                                           <p class="text-muted">Published {{nfil.CreateDate | date:'M/dd/yyyy'}}</p>
+                                       </div>
+
+                                       <div class="line-divider"></div>
+                                       <div class="post-text">
+                                           <p>{{nfil.Body}}</p>
+                                       </div>
+                                       <div class="line-divider"></div>
+                                       <div class="post-comment" ng-repeat="cmt in nfil.NewsFeedItemComments">
+                                           <img src="~/images/acct/{{cmt.User.ProfilePic}}" alt="" class="profile-photo-sm" />
+                                           <p><a href="#" ng-click="GetNewsFeedItemsByUserID(cmt.User.ID)" class="profile-link">{{cmt.User.Name}} </a>{{cmt.Comment_Body}}</p>
+
+                                       </div>
+                                       <div class="post-comment">
+                                           <img src="~/images/acct/{{currentUser.ProfilePic}}" alt="" class="profile-photo-sm" />
+                                           <input type="text" class="form-control" maxlength="200" id="cmtBox{{nfil.ID}}" ng-keypress="CreateNewsFeedItemComment($event, nfil, '#cmtBox' + nfil.ID)" placeholder="Post a comment">
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                <dir-pagination-controls max-size="3"
+                                         direction-links="true"
+                                         boundary-links="true"></dir-pagination-controls>
+
+            </div>
+
+            <!-- Newsfeed Common Side Bar Right
+            ================================================= -->
+            <div class="col-md-2 static">
+                <div class="suggestions" id="sticky-sidebar" ng-controller="SuggestionsController" ng-init="getSuggestionList()">
+                    <h4 class="grey">Who to Follow</h4>
+
+                    <div class="follow-user" ng-repeat="us in WhotoFollow">
+                        <img src="~/images/acct/{{us.ProfilePic}}" alt="" class="profile-photo-sm pull-left" />
+                        <div>
+                            <h5><a href="timeline.html">{{us.Name}}</a></h5>
+                            <a href="#" ng-click="Subscribe(us.ID, '#fa' + us.ID)" id="fa{{us.ID}}" class="text-green">Add friend</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+<!-- Footer
+================================================= -->
+
+
+

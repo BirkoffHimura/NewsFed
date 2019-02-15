@@ -1,0 +1,24 @@
+C:\Users\Testo\Documents\Visual Studio 2015\Projects\TestOne\DAL\bin\Debug\DAL.dll.config
+C:\Users\Testo\Documents\Visual Studio 2015\Projects\TestOne\DAL\bin\Debug\DAL.dll
+C:\Users\Testo\Documents\Visual Studio 2015\Projects\TestOne\DAL\bin\Debug\DAL.pdb
+C:\Users\Testo\Documents\Visual Studio 2015\Projects\TestOne\DAL\bin\Debug\BOL.dll
+C:\Users\Testo\Documents\Visual Studio 2015\Projects\TestOne\DAL\bin\Debug\EntityFramework.dll
+C:\Users\Testo\Documents\Visual Studio 2015\Projects\TestOne\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Testo\Documents\Visual Studio 2015\Projects\TestOne\DAL\bin\Debug\BOL.pdb
+C:\Users\Testo\Documents\Visual Studio 2015\Projects\TestOne\DAL\bin\Debug\EntityFramework.xml
+C:\Users\Testo\Documents\Visual Studio 2015\Projects\TestOne\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Testo\Documents\Visual Studio 2015\Projects\TestOne\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\Testo\Documents\Visual Studio 2015\Projects\TestOne\DAL\obj\Debug\DAL.dll
+C:\Users\Testo\Documents\Visual Studio 2015\Projects\TestOne\DAL\obj\Debug\DAL.pdb
+G:\My Projects\NFed\TestOne\DAL\bin\Debug\DAL.dll.config
+G:\My Projects\NFed\TestOne\DAL\bin\Debug\DAL.dll
+G:\My Projects\NFed\TestOne\DAL\bin\Debug\DAL.pdb
+G:\My Projects\NFed\TestOne\DAL\bin\Debug\BOL.dll
+G:\My Projects\NFed\TestOne\DAL\bin\Debug\EntityFramework.dll
+G:\My Projects\NFed\TestOne\DAL\bin\Debug\EntityFramework.SqlServer.dll
+G:\My Projects\NFed\TestOne\DAL\bin\Debug\BOL.pdb
+G:\My Projects\NFed\TestOne\DAL\bin\Debug\EntityFramework.xml
+G:\My Projects\NFed\TestOne\DAL\bin\Debug\EntityFramework.SqlServer.xml
+G:\My Projects\NFed\TestOne\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+G:\My Projects\NFed\TestOne\DAL\obj\Debug\DAL.dll
+G:\My Projects\NFed\TestOne\DAL\obj\Debug\DAL.pdb
