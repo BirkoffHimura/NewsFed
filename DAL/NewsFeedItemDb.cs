@@ -31,20 +31,13 @@ namespace DAL
             var ret = db.NewsFeedItems
                 .Include(u => u.User)
                 .Include(c => c.NewsFeedItemComments.Select(us => us.User))
-                .OrderByDescending(o => o.CreateDate)
-                .ToList();
-
-            //ugly fix: will comeback later to exclude the column from query
-            for (int x = 0; x < ret.Count; x++)
-            {
-                ret[x].User.Password = "";
-                for (int y = 0; y < ret[x].NewsFeedItemComments.Count; y++)
-                {
-                    ret[x].NewsFeedItemComments[y].User.Password = "";
-                }
-            }
+                .OrderByDescending(o => o.CreateDate);
+            
             return ret;
         }
+
+
+
         public NewsFeedItem GetByID(long Id)
         {
             return db.NewsFeedItems
@@ -60,16 +53,7 @@ namespace DAL
                 .Include(c => c.NewsFeedItemComments.Select(us => us.User))
                 .OrderByDescending(o => o.CreateDate)
                 .ToList();
-            //ugly fix: will comeback later to exclude the column from query
-            for (int x = 0; x < ret.Count; x++)
-            {
-                ret[x].User.Password = "";
-                for (int y = 0; y < ret[x].NewsFeedItemComments.Count; y++)
-                {
-                    ret[x].NewsFeedItemComments[y].User.Password = "";
-                }
-            }
-
+            
             return ret;
         }
 
@@ -85,16 +69,7 @@ namespace DAL
                 .Include(c => c.NewsFeedItemComments.Select(us => us.User))
                 .OrderByDescending(o => o.CreateDate)
                 .ToList();
-
-            for (int x = 0; x < ret.Count; x++)
-            {
-                ret[x].User.Password = "";
-                for (int y = 0; y < ret[x].NewsFeedItemComments.Count; y++)
-                {
-                    ret[x].NewsFeedItemComments[y].User.Password = "";
-                }
-            }
-
+                        
             return ret;
         }
 
@@ -109,16 +84,7 @@ namespace DAL
                 .Include(c => c.NewsFeedItemComments.Select(u => u.User))
                 .OrderByDescending(o => o.CreateDate)
                 .ToList();
-            //ugly fix: will comeback later to exclude the column from query
-            for (int x = 0; x < ret.Count; x++)
-            {
-                ret[x].User.Password = "";
-                for (int y = 0; y < ret[x].NewsFeedItemComments.Count; y++)
-                {
-                    ret[x].NewsFeedItemComments[y].User.Password = "";
-                }
-            }
-
+            
             return ret;
         }
 
