@@ -13,14 +13,16 @@ namespace NFed.Tests
     [TestClass]
     public class BLL_UserBSTests
     {
-        TestTools tt;
+        TestToolsBLL tt;
         UserBs db;
+        MappingProfile mp;
         public BLL_UserBSTests()
         {
             TestTools.CleanUpDb("Constructor");
-            tt = new TestTools();
+            tt = new TestToolsBLL();
             tt.SetupInitialUserAccounts();
             db = new UserBs(true);
+            mp = new MappingProfile();
         }
         [ClassInitialize()]
         public static void ClassTestInitialize(TestContext testContext)
@@ -36,11 +38,23 @@ namespace NFed.Tests
         public void TestUserBSInsertUser()
         {
 
-            User user = tt.InsertUser("Test User", Guid.NewGuid().ToString() + "@user.com", "pass123");
+            UserDTO user = new UserDTO()
+            {
+                Name = "Test User",
+                UserName = Guid.NewGuid().ToString() + "@user.com",
+                Password = "pass123",
+                AdminAcct = false,
+                AllowPost = false,
+                ProfilePic = "noimage.png",
+                BirthDate = DateTime.Now,
+                SignupDate = DateTime.Now
+            };
+            //tt.InsertUser("Test User", Guid.NewGuid().ToString() + "@user.com", "pass123");
             db.Insert(user);
-            User tmp = db.GetByUserName(user.UserName);
+            UserDTO tmp = db.GetByUserName(user.UserName);
             Assert.IsNotNull(tmp);
         }
+
         [DataTestMethod]
         [DataRow("Test User", "testuser.com", "pass123")]
         [DataRow("Test User", "testuser", "pass123")]
@@ -49,33 +63,42 @@ namespace NFed.Tests
         [ExpectedException(typeof(DbEntityValidationException))]
         public void TestUserBSInvalidEmail(string theName, string uName, string pass)
         {
-            User user = tt.InsertUser(theName, uName, pass);
+            UserDTO user = new UserDTO()
+            {
+                Name = theName,
+                UserName = uName,
+                Password = pass,
+                AdminAcct = false,
+                AllowPost = false,
+                ProfilePic = "noimage.png"
+            };
+            //tt.InsertUser(theName, uName, pass);
             db.Insert(user);
         }
 
         [TestMethod]
         public void TestUserBSGetAll()
         {
-            List<User> ret = (List<User>)db.GetAll();
+            List<UserDTO> ret = (List<UserDTO>)db.GetAll();
             Assert.IsTrue(ret.Count > 0);
         }
         [TestMethod]
         public void TestUserBSGetRandom()
         {
-            List<User> ret = (List<User>)db.GetRandom();
+            List<UserDTO> ret = (List<UserDTO>)db.GetRandom();
             Assert.IsTrue(ret.Count > 0);
         }
         [TestMethod]
         public void TestUserBSGetByID()
         {
-            User tUser;
+            UserDTO tUser;
             tUser = db.GetByID(tt.userOne.ID);
             Assert.AreEqual(tt.userOne.UserName, tUser.UserName);
         }
         [TestMethod]
         public void TestUserBSGetByUserName()
         {
-            User tUser;
+            UserDTO tUser;
             tUser = db.GetByUserName(tt.userOne.UserName);
             Assert.AreEqual(tt.userOne.UserName, tUser.UserName);
             Assert.AreEqual(tt.userOne.ID, tUser.ID);
@@ -85,7 +108,7 @@ namespace NFed.Tests
         public void TestUserBSDelete()
         {
             db.Delete(tt.userThree.ID);
-            User tUser;
+            UserDTO tUser;
             tUser = db.GetByID(tt.userThree.ID);
             Assert.IsNull(tUser);
         }
@@ -96,7 +119,7 @@ namespace NFed.Tests
             User tUser = new User();
 
 
-            User cUser;
+            UserDTO cUser;
             tt.userTwo.Name = "UserDbUdate test";
 
 

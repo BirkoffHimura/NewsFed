@@ -118,6 +118,7 @@
     <Content Include="images\bottom-shadow.png" />
     <Content Include="images\bullet.png" />
     <Content Include="images\down-arrow.png" />
+    <Content Include="images\envato.png" />
     <Content Include="images\face-map.png" />
     <Content Include="images\fav.png" />
     <Content Include="images\google-play.png" />
@@ -221,10 +222,6 @@
     <ProjectReference Include="..\BLL\BLL.csproj">
       <Project>{620557b7-0b7e-4557-9664-dbd678a75b78}</Project>
       <Name>BLL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\BOL\BOL.csproj">
-      <Project>{c48994bb-402e-4a0f-b213-23e5b0ed5ce3}</Project>
-      <Name>BOL</Name>
     </ProjectReference>
     <ProjectReference Include="..\JsonLib\JsonLib.csproj">
       <Project>{c011c1e9-f135-4d88-91a0-f476adf0b753}</Project>

@@ -37,10 +37,12 @@ namespace DAL
 
         public UserSubscription GetByFeedAndSubID(long FeedId, long SubId)
         {
-            return db.UserSubscriptions
+            var ret = db.UserSubscriptions
                 .Include(u => u.Feed_ID)
                 .Where(x => x.User_Feed_ID == FeedId && x.User_Sub_ID == SubId)
                 .FirstOrDefault();
+            
+            return ret;
         }
 
         public IEnumerable<UserSubscription> GetSubsByFeedID(long Id)
@@ -68,10 +70,12 @@ namespace DAL
                 .FirstOrDefault();
             long Id = user != null ? user.ID : -1;
 
-            return db.UserSubscriptions
+            var ret = db.UserSubscriptions
                 .Include(uf => uf.Feed_ID)
                 .Where(x => x.User_Sub_ID == Id)
-                .ToList();           
+                .ToList();
+            
+            return ret;
         }
 
         public int Insert(UserSubscription userSubscription)

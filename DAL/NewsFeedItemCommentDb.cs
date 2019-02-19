@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -58,7 +59,7 @@ namespace DAL
             {
                 db.Entry(newsFeedItemComment.NewsFeedItem).State = EntityState.Unchanged;
             }
-            if (newsFeedItemComment.NewsFeedItem != null)
+            if (newsFeedItemComment.User != null)
             {
                 db.Entry(newsFeedItemComment.User).State = EntityState.Unchanged;
             }
@@ -79,10 +80,8 @@ namespace DAL
 
         public int Update(NewsFeedItemComment newsFeedItemComment)
         {
-            db.Entry(newsFeedItemComment).State = System.Data.Entity.EntityState.Modified;
-            db.Configuration.ValidateOnSaveEnabled = false;
+            db.Set<NewsFeedItemComment>().AddOrUpdate(newsFeedItemComment);
             int i = Save();
-            db.Configuration.ValidateOnSaveEnabled = true;
             return i;
         }
 

@@ -1,4 +1,5 @@
-﻿using BOL;
+﻿using AutoMapper;
+using BOL;
 using DAL;
 using System;
 using System.Collections.Generic;
@@ -11,9 +12,11 @@ namespace BLL
     public class UserSubscriptionBs
     {
         private UserSubscriptionDb db;
+        private MappingProfile mp;
         public UserSubscriptionBs()
         {
             db = new UserSubscriptionDb();
+            mp = new MappingProfile();
         }
         public UserSubscriptionBs(bool local)
         {
@@ -25,42 +28,43 @@ namespace BLL
             {
                 db = new UserSubscriptionDb();
             }
+            mp = new MappingProfile();
         }
-        public IEnumerable<UserSubscription> GetAll()
+        public IEnumerable<UserSubscriptionDTO> GetAll()
         {
-            return db.GetAll();
+            return Mapper.Map<List<UserSubscriptionDTO>>(db.GetAll());
         }
-        public UserSubscription GetByID(long Id)
+        public UserSubscriptionDTO GetByID(long Id)
         {
-            return db.GetByID(Id);
+            return Mapper.Map<UserSubscriptionDTO>(db.GetByID(Id));
         }
-        public UserSubscription GetByFeedAndSubID(long FeedId, long SubId)
+        public UserSubscriptionDTO GetByFeedAndSubID(long FeedId, long SubId)
         {
-            return db.GetByFeedAndSubID(FeedId, SubId);
+            return Mapper.Map<UserSubscriptionDTO>(db.GetByFeedAndSubID(FeedId, SubId));
         }
-        public IEnumerable<UserSubscription> GetSubsByFeedID(long Id)
+        public IEnumerable<UserSubscriptionDTO> GetSubsByFeedID(long Id)
         {
-            return db.GetSubsByFeedID(Id);
-        }
-
-        public IEnumerable<UserSubscription> GetFeedsBySubID(long Id)
-        {
-            return db.GetFeedsBySubID(Id);
+            return Mapper.Map<List<UserSubscriptionDTO>>(db.GetSubsByFeedID(Id));
         }
 
-        public IEnumerable<UserSubscription> GetSubsByFeedUserName(string userName)
+        public IEnumerable<UserSubscriptionDTO> GetFeedsBySubID(long Id)
         {
-            return db.GetSubsByFeedUserName(userName);
+            return Mapper.Map<List<UserSubscriptionDTO>>(db.GetFeedsBySubID(Id));
         }
 
-        public IEnumerable<UserSubscription> GetFeedsBySubUserName(string userName)
+        public IEnumerable<UserSubscriptionDTO> GetSubsByFeedUserName(string userName)
         {
-            return db.GetFeedsBySubUserName(userName);
+            return Mapper.Map<List<UserSubscriptionDTO>>(db.GetSubsByFeedUserName(userName));
         }
 
-        public int Insert(UserSubscription userSubscription)
+        public IEnumerable<UserSubscriptionDTO> GetFeedsBySubUserName(string userName)
         {
-            return db.Insert(userSubscription);
+            return Mapper.Map<List<UserSubscriptionDTO>>(db.GetFeedsBySubUserName(userName));
+        }
+
+        public int Insert(UserSubscriptionDTO userSubscription)
+        {
+            return db.Insert(Mapper.Map<UserSubscription>(userSubscription));
         }
 
         public int Delete(long Id)

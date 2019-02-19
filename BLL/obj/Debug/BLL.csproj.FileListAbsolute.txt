@@ -9,28 +9,11 @@ C:\Users\Testo\Documents\Visual Studio 2015\Projects\TestOne\BLL\bin\Debug\Entit
 C:\Users\Testo\Documents\Visual Studio 2015\Projects\TestOne\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
 C:\Users\Testo\Documents\Visual Studio 2015\Projects\TestOne\BLL\obj\Debug\BLL.dll
 C:\Users\Testo\Documents\Visual Studio 2015\Projects\TestOne\BLL\obj\Debug\BLL.pdb
-G:\My Projects\NFed\TestOne\BLL\bin\Debug\BLL.dll
-G:\My Projects\NFed\TestOne\BLL\bin\Debug\BLL.pdb
-G:\My Projects\NFed\TestOne\BLL\bin\Debug\BOL.dll
-G:\My Projects\NFed\TestOne\BLL\bin\Debug\DAL.dll
-G:\My Projects\NFed\TestOne\BLL\bin\Debug\EntityFramework.dll
-G:\My Projects\NFed\TestOne\BLL\bin\Debug\BOL.pdb
-G:\My Projects\NFed\TestOne\BLL\bin\Debug\DAL.pdb
-G:\My Projects\NFed\TestOne\BLL\bin\Debug\EntityFramework.xml
-G:\My Projects\NFed\TestOne\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
-G:\My Projects\NFed\TestOne\BLL\obj\Debug\BLL.dll
-G:\My Projects\NFed\TestOne\BLL\obj\Debug\BLL.pdb
-G:\My Projects\NFed\NewsFed\BLL\bin\Debug\BLL.dll
-G:\My Projects\NFed\NewsFed\BLL\bin\Debug\BLL.pdb
-G:\My Projects\NFed\NewsFed\BLL\bin\Debug\BOL.dll
-G:\My Projects\NFed\NewsFed\BLL\bin\Debug\DAL.dll
-G:\My Projects\NFed\NewsFed\BLL\bin\Debug\EntityFramework.dll
-G:\My Projects\NFed\NewsFed\BLL\bin\Debug\BOL.pdb
-G:\My Projects\NFed\NewsFed\BLL\bin\Debug\DAL.pdb
-G:\My Projects\NFed\NewsFed\BLL\bin\Debug\EntityFramework.xml
-G:\My Projects\NFed\NewsFed\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
-G:\My Projects\NFed\NewsFed\BLL\obj\Debug\BLL.dll
-G:\My Projects\NFed\NewsFed\BLL\obj\Debug\BLL.pdb
-G:\My Projects\NFed\NewsFed\BLL\bin\Debug\Newtonsoft.Json.dll
-G:\My Projects\NFed\NewsFed\BLL\bin\Debug\Newtonsoft.Json.pdb
-G:\My Projects\NFed\NewsFed\BLL\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Testo\Documents\Visual Studio 2015\Projects\TestOne\BLL\bin\Debug\AutoMapper.dll
+C:\Users\Testo\Documents\Visual Studio 2015\Projects\TestOne\BLL\bin\Debug\System.ValueTuple.dll
+C:\Users\Testo\Documents\Visual Studio 2015\Projects\TestOne\BLL\bin\Debug\AutoMapper.pdb
+C:\Users\Testo\Documents\Visual Studio 2015\Projects\TestOne\BLL\bin\Debug\AutoMapper.xml
+C:\Users\Testo\Documents\Visual Studio 2015\Projects\TestOne\BLL\bin\Debug\System.ValueTuple.xml
+C:\Users\Testo\Documents\Visual Studio 2015\Projects\TestOne\BLL\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Testo\Documents\Visual Studio 2015\Projects\TestOne\BLL\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\Testo\Documents\Visual Studio 2015\Projects\TestOne\BLL\bin\Debug\Newtonsoft.Json.xml

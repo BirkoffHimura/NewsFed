@@ -269,7 +269,7 @@ namespace BLL
 
         public override bool ValidateUser(string username, string password)
         {
-            int count = db.GetAll().Where(x => x.UserName.ToUpper() == username.ToUpper() && x.Password == password).Count();
+            int count = db.GetAllWithPass().Where(x => x.UserName.ToUpper() == username.ToUpper() && x.Password == password).Count();
             if (count != 0)
             {
                 return true;

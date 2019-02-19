@@ -1,5 +1,4 @@
-﻿using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
@@ -25,33 +24,22 @@ namespace BOL
         [EmailAddress, MaxLength(256), DisplayName("User Name"), Required, Index(IsUnique = true)]
         public string UserName { get; set; }
         [MaxLength(25), Required]
-        [JsonIgnore]
         public string Password { get; set; }
         [MaxLength(50), DisplayName("Address Line 1")]
-        [JsonIgnore]
         public string AddressLine1 { get; set; }
         [MaxLength(50), DisplayName("Address Line 2")]
-        [JsonIgnore]
         public string AddressLine2 { get; set; }
         [MaxLength(55)]
-        [JsonIgnore]
         public string Country { get; set; }
-        [JsonIgnore]
         public string City { get; set; }
         [MaxLength(2)]
-        [JsonIgnore]
         public string State { get; set; }
         [MaxLength(5)]
-        [JsonIgnore]
         public string ZipCode { get; set; }
         [DisplayName("Birth Date")]
-        [JsonIgnore]
         public DateTime BirthDate { get; set; }
-        [JsonIgnore]
         public DateTime SignupDate { get; set; }
-        [JsonIgnore]
         public bool AdminAcct { get; set; }
-        [JsonIgnore]
         public bool AllowPost { get; set; }
         [Required, MaxLength(60), DataType(DataType.ImageUrl)]
         public string ProfilePic { get; set; }

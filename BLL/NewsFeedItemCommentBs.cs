@@ -5,15 +5,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AutoMapper;
 
 namespace BLL
 {
     public class NewsFeedItemCommentBs
     {
         private NewsFeedItemCommentDb db;
+        private MappingProfile mp;
         public NewsFeedItemCommentBs()
         {
             db = new NewsFeedItemCommentDb();
+            mp = new MappingProfile();
         }
         public NewsFeedItemCommentBs(bool local)
         {
@@ -25,23 +28,24 @@ namespace BLL
             {
                 db = new NewsFeedItemCommentDb();
             }
+            mp = new MappingProfile();
         }
-        public IEnumerable<NewsFeedItemComment> GetAll()
+        public IEnumerable<NewsFeedItemCommentDTO> GetAll()
         {
-            return db.GetAll();
+            return Mapper.Map<List<NewsFeedItemCommentDTO>>(db.GetAll());
         }
-        public NewsFeedItemComment GetByID(long Id)
+        public NewsFeedItemCommentDTO GetByID(long Id)
         {
-            return db.GetByID(Id);
+            return Mapper.Map<NewsFeedItemCommentDTO>(db.GetByID(Id));
         }
-        public List<NewsFeedItemComment> GetByUserName(string UserNane)
+        public List<NewsFeedItemCommentDTO> GetByUserName(string UserNane)
         {
-            return db.GetByUserName(UserNane);
+            return Mapper.Map<List<NewsFeedItemCommentDTO>>(db.GetByUserName(UserNane));
         }
 
-        public int Insert(NewsFeedItemComment newsFeedItemComment)
+        public int Insert(NewsFeedItemCommentDTO newsFeedItemComment)
         {
-            return db.Insert(newsFeedItemComment);
+            return db.Insert(Mapper.Map<NewsFeedItemComment>(newsFeedItemComment));
         }
 
         public int Delete(long Id)
@@ -49,9 +53,9 @@ namespace BLL
             return db.Delete(Id);
         }
 
-        public int Update(NewsFeedItemComment newsFeedItemComment)
+        public int Update(NewsFeedItemCommentDTO newsFeedItemComment)
         {
-            return db.Update(newsFeedItemComment);
+            return db.Update(Mapper.Map<NewsFeedItemComment>(newsFeedItemComment));
         }
     }
 }

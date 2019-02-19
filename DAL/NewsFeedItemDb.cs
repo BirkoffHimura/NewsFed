@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -31,13 +32,11 @@ namespace DAL
             var ret = db.NewsFeedItems
                 .Include(u => u.User)
                 .Include(c => c.NewsFeedItemComments.Select(us => us.User))
-                .OrderByDescending(o => o.CreateDate);
+                .OrderByDescending(o => o.CreateDate)
+                .ToList();
             
             return ret;
         }
-
-
-
         public NewsFeedItem GetByID(long Id)
         {
             return db.NewsFeedItems
@@ -53,7 +52,6 @@ namespace DAL
                 .Include(c => c.NewsFeedItemComments.Select(us => us.User))
                 .OrderByDescending(o => o.CreateDate)
                 .ToList();
-            
             return ret;
         }
 
@@ -69,7 +67,7 @@ namespace DAL
                 .Include(c => c.NewsFeedItemComments.Select(us => us.User))
                 .OrderByDescending(o => o.CreateDate)
                 .ToList();
-                        
+            
             return ret;
         }
 
@@ -84,7 +82,7 @@ namespace DAL
                 .Include(c => c.NewsFeedItemComments.Select(u => u.User))
                 .OrderByDescending(o => o.CreateDate)
                 .ToList();
-            
+
             return ret;
         }
 
@@ -104,10 +102,8 @@ namespace DAL
 
         public int Update(NewsFeedItem newsFeedItem)
         {
-            db.Entry(newsFeedItem).State = System.Data.Entity.EntityState.Modified;
-            db.Configuration.ValidateOnSaveEnabled = false;
+            db.Set<NewsFeedItem>().AddOrUpdate(newsFeedItem);
             int i = Save();
-            db.Configuration.ValidateOnSaveEnabled = true;
             return i;
         }
 

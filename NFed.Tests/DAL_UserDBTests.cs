@@ -61,6 +61,13 @@ namespace NFed.Tests
         }
 
         [TestMethod]
+        public void TestUserDbGetAllWithPassword()
+        {
+            List<User> ret = (List<User>)db.GetAllWithPass();
+            Assert.IsTrue(ret.Count > 0);
+        }
+
+        [TestMethod]
         public void TestUserDbGetRandom()
         {
             List<User> ret = (List<User>)db.GetRandom();

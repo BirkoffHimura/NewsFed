@@ -12,12 +12,12 @@ namespace NFed.Tests
     [TestClass]
     public class BLL_UserSubscriptionBSTests
     {
-        TestTools tt;
+        TestToolsBLL tt;
         UserSubscriptionBs db;
         public BLL_UserSubscriptionBSTests()
         {
             TestTools.CleanUpDb("Constructor");
-            tt = new TestTools();
+            tt = new TestToolsBLL();
             tt.SetupInitialUserAccounts();
             db = new UserSubscriptionBs(true);
         }
@@ -35,15 +35,15 @@ namespace NFed.Tests
         public void TestUserSubscriptionBSInsert()
         {
 
-            UserSubscription userSubscription = new UserSubscription()
+            UserSubscriptionDTO userSubscription = new UserSubscriptionDTO()
             {
                 User_Sub_ID = tt.userOne.ID,
                 User_Feed_ID = tt.userTwo.ID
             };
             db.Insert(userSubscription);
-            List<UserSubscription> tmp = db.GetSubsByFeedUserName(tt.userTwo.UserName).ToList();
+            List<UserSubscriptionDTO> tmp = db.GetSubsByFeedUserName(tt.userTwo.UserName).ToList();
             bool found = false;
-            foreach (UserSubscription item in tmp)
+            foreach (UserSubscriptionDTO item in tmp)
             {
                 if (item.User_Sub_ID == tt.userOne.ID)
                 { found = true; }
@@ -64,7 +64,7 @@ namespace NFed.Tests
         [TestMethod]
         public void TestUserSubscriptionBSGetByID()
         {
-            UserSubscription userSubscription;
+            UserSubscriptionDTO userSubscription;
             userSubscription = db.GetByID(tt.userTwoSubscription.ID);
             Assert.IsNotNull(userSubscription);
             Assert.AreEqual(tt.userTwoSubscription.User_Feed_ID, userSubscription.User_Feed_ID);
@@ -74,11 +74,11 @@ namespace NFed.Tests
         [TestMethod]
         public void TestUserSubscriptionBSGetSubsByFeedID()
         {
-            List<UserSubscription> userSubscription;
+            List<UserSubscriptionDTO> userSubscription;
             userSubscription = db.GetSubsByFeedID(tt.userTwoSubscription.User_Feed_ID).ToList();
             Assert.IsNotNull(userSubscription);
             bool valid = true;
-            foreach (UserSubscription item in userSubscription)
+            foreach (UserSubscriptionDTO item in userSubscription)
             {
                 if (item.User_Feed_ID != tt.userTwoSubscription.User_Feed_ID)
                 {
@@ -91,11 +91,11 @@ namespace NFed.Tests
         [TestMethod]
         public void TestUserSubscriptionBSGetByGetFeedsBySubID()
         {
-            List<UserSubscription> userSubscription;
+            List<UserSubscriptionDTO> userSubscription;
             userSubscription = db.GetFeedsBySubID(tt.userTwoSubscription.User_Sub_ID).ToList();
             Assert.IsNotNull(userSubscription);
             bool valid = true;
-            foreach (UserSubscription item in userSubscription)
+            foreach (UserSubscriptionDTO item in userSubscription)
             {
                 if (item.User_Sub_ID != tt.userTwoSubscription.User_Sub_ID)
                 {
@@ -108,11 +108,11 @@ namespace NFed.Tests
         [TestMethod]
         public void TestUserSubscriptionBSGetSubsByFeedUserName()
         {
-            List<UserSubscription> userSubscription;
+            List<UserSubscriptionDTO> userSubscription;
             userSubscription = db.GetSubsByFeedUserName(tt.userOne.UserName).ToList();
             Assert.IsNotNull(userSubscription);
             bool valid = true;
-            foreach (UserSubscription item in userSubscription)
+            foreach (UserSubscriptionDTO item in userSubscription)
             {
                 if (item.User_Feed_ID != tt.userOne.ID)
                 {
@@ -125,11 +125,11 @@ namespace NFed.Tests
         [TestMethod]
         public void TestUserSubscriptionBSGetByGetFeedsBySubUserName()
         {
-            List<UserSubscription> userSubscription;
+            List<UserSubscriptionDTO> userSubscription;
             userSubscription = db.GetFeedsBySubUserName(tt.userTwo.UserName).ToList();
             Assert.IsNotNull(userSubscription);
             bool valid = true;
-            foreach (UserSubscription item in userSubscription)
+            foreach (UserSubscriptionDTO item in userSubscription)
             {
                 if (item.User_Sub_ID != tt.userTwo.ID)
                 {
@@ -143,7 +143,7 @@ namespace NFed.Tests
         public void TestUserSubscriptionBSDelete()
         {
             db.Delete(tt.userThreeSubscription.ID);
-            UserSubscription userSubscription;
+            UserSubscriptionDTO userSubscription;
             userSubscription = db.GetByID(tt.userThreeSubscription.ID);
             Assert.IsNull(userSubscription);
         }

@@ -5,15 +5,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AutoMapper;
 
 namespace BLL
 {
     public class UserBs
     {
         private UserDb db;
+        private MappingProfile mp;
         public UserBs()
         {
             db = new UserDb();
+            mp = new MappingProfile();
         }
         public UserBs(bool local)
         {
@@ -25,33 +28,34 @@ namespace BLL
             {
                 db = new UserDb();
             }
+            mp = new MappingProfile();
         }
-        public IEnumerable<User> GetAll()
-        {
-            return db.GetAll();
-        }
-        public IEnumerable<User> GetRandom()
-        {
-            return db.GetRandom();
-        }
-
-        public IEnumerable<User> GetRandom(string userName)
-        {
-            return db.GetRandom(userName);
-        }
-
-        public User GetByID(long Id)
-        {
-            return db.GetByID(Id);
-        }
-        public User GetByUserName(string UserNane)
-        {
-            return db.GetByUserName(UserNane);
-        }
-
-        public int Insert(User user)
+        public IEnumerable<UserDTO> GetAll()
         {            
-            return db.Insert(user);
+            return Mapper.Map<List<UserDTO>>(db.GetAll());
+        }
+        public IEnumerable<UserDTO> GetRandom()
+        {
+            return Mapper.Map<List<UserDTO>>(db.GetRandom());
+        }
+
+        public IEnumerable<UserDTO> GetRandom(string userName)
+        {
+            return Mapper.Map<List<UserDTO>>(db.GetRandom(userName));
+        }
+
+        public UserDTO GetByID(long Id)
+        {            
+            return Mapper.Map<UserDTO>(db.GetByID(Id));
+        }
+        public UserDTO GetByUserName(string UserNane)
+        {
+            return Mapper.Map<UserDTO>(db.GetByUserName(UserNane));
+        }
+
+        public int Insert(UserDTO user)
+        {
+            return db.Insert(Mapper.Map<User>(user));
         }
 
         public int Delete(long Id)
@@ -59,9 +63,9 @@ namespace BLL
             return db.Delete(Id);
         }
 
-        public int Update(User user)
-        {            
-            return db.Update(user);
+        public int Update(UserDTO user)
+        {
+            return db.Update(Mapper.Map<User>(user));
         }        
     }
 }

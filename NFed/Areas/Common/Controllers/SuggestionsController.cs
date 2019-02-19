@@ -32,8 +32,8 @@ namespace NFed.Areas.Common.Controllers
         [HttpPost]
         public ActionResult Subscribe(long Id)
         {
-            BOL.User user = uBs.GetByUserName(User.Identity.Name);
-            BOL.UserSubscription us = new BOL.UserSubscription()
+            UserDTO user = uBs.GetByUserName(User.Identity.Name);
+            UserSubscriptionDTO us = new UserSubscriptionDTO()
             {
                 User_Feed_ID = Id,
                 User_Sub_ID = user.ID

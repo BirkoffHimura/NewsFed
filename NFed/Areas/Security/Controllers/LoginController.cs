@@ -1,4 +1,4 @@
-﻿using BOL;
+﻿using BLL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +18,7 @@ namespace NFed.Areas.Security.Controllers
         }
 
         [HttpPost]
-        public ActionResult SignIn(User user)
+        public ActionResult SignIn(UserDTO user)
         {
             try
             {

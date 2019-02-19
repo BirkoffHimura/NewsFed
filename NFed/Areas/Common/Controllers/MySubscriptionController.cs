@@ -35,8 +35,8 @@ namespace NFed.Areas.Common.Controllers
         [HttpPost]
         public ActionResult UnSubscribe(long Id)
         {
-            BOL.User user = uBs.GetByUserName(User.Identity.Name);
-            BOL.UserSubscription us = usBs.GetByFeedAndSubID(Id, user.ID);
+            UserDTO user = uBs.GetByUserName(User.Identity.Name);
+            UserSubscriptionDTO us = usBs.GetByFeedAndSubID(Id, user.ID);
             
             usBs.Delete(us.ID);
             var data = usBs.GetFeedsBySubUserName(User.Identity.Name);

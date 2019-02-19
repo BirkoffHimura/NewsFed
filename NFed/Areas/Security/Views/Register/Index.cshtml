@@ -1,4 +1,4 @@
-﻿@model BOL.User
+﻿@model BLL.UserDTO
 
 @{
     ViewBag.Title = "Register";
@@ -38,7 +38,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.PasswordFor(model => model.Password, new { @class = "form-control", @placeholder = "Type in your password here" })
+                @Html.PasswordFor(model => model.Password, new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
             </div>
         </div>

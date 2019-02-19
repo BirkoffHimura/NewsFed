@@ -12,12 +12,12 @@ namespace NFed.Tests
     [TestClass]
     public class BLL_NewsFeedItemBSTests
     {
-        TestTools tt;
+        TestToolsBLL tt;
         NewsFeedItemBs db;
         public BLL_NewsFeedItemBSTests()
         {
             TestTools.CleanUpDb("Constructor");
-            tt = new TestTools();
+            tt = new TestToolsBLL();
             tt.SetupInitialUserAccounts();
             db = new NewsFeedItemBs(true);
         }
@@ -32,10 +32,10 @@ namespace NFed.Tests
             TestTools.CleanUpDb("Destructor");
         }
         [TestMethod]
-        public void TestNewsFeedItemDbInsert()
+        public void TestNewsFeedItemBsInsert()
         {
             string title = Guid.NewGuid().ToString();
-            NewsFeedItem newsFeedItem = new NewsFeedItem()
+            NewsFeedItemDTO newsFeedItem = new NewsFeedItemDTO()
             {
                 Body = Guid.NewGuid().ToString(),
                 Title = title,
@@ -44,9 +44,9 @@ namespace NFed.Tests
                 UserID = tt.userOne.ID
             };
             db.Insert(newsFeedItem);
-            List<NewsFeedItem> tmp = db.GetByUserName(tt.userOne.UserName).ToList();
+            List<NewsFeedItemDTO> tmp = db.GetByUserName(tt.userOne.UserName).ToList();
             bool found = false;
-            foreach (NewsFeedItem item in tmp)
+            foreach (NewsFeedItemDTO item in tmp)
             {
                 if (item.Title == title)
                 { found = true; }
@@ -57,7 +57,7 @@ namespace NFed.Tests
         }
 
         [TestMethod]
-        public void TestNewsFeedItemDbGetAll()
+        public void TestNewsFeedItemBsGetAll()
         {
             var item = db.GetAll();
             Assert.IsNotNull(item);
@@ -65,9 +65,9 @@ namespace NFed.Tests
         }
 
         [TestMethod]
-        public void TestNewsFeedItemDbGetByID()
+        public void TestNewsFeedItemBsGetByID()
         {
-            NewsFeedItem newsFeedItem;
+            NewsFeedItemDTO newsFeedItem;
             newsFeedItem = db.GetByID(tt.userOneFirstNewsFeedItem.ID);
             Assert.IsNotNull(newsFeedItem);
         }
@@ -75,21 +75,21 @@ namespace NFed.Tests
         [TestMethod]
         public void TestNewsFeedItemDbGetByUserName()
         {
-            List<NewsFeedItem> newsFeedItem;
+            List<NewsFeedItemDTO> newsFeedItem;
             newsFeedItem = db.GetByUserName(tt.userOne.UserName);
             Assert.IsNotNull(newsFeedItem);
             Assert.IsTrue(newsFeedItem.Count() > 0);
         }
 
         [TestMethod]
-        public void TestNewsFeedItemDbSearch()
+        public void TestNewsFeedItemBsSearch()
         {
-            List<NewsFeedItem> newsFeedItem;
+            List<NewsFeedItemDTO> newsFeedItem;
             newsFeedItem = db.Search(tt.userOneFirstNewsFeedItem.Body);
             Assert.IsNotNull(newsFeedItem);
             Assert.IsTrue(newsFeedItem.Count() > 0);
             bool found = false;
-            foreach (NewsFeedItem item in newsFeedItem)
+            foreach (NewsFeedItemDTO item in newsFeedItem)
             {
                 if (item.ID == tt.userOneFirstNewsFeedItem.ID)
                 {
@@ -99,22 +99,22 @@ namespace NFed.Tests
             Assert.IsTrue(found);
         }
         [TestMethod]
-        public void TestNewsFeedItemDbGetNewsFeedItemsFromFeedsBySubscriberUserName()
+        public void TestNewsFeedItemBsGetNewsFeedItemsFromFeedsBySubscriberUserName()
         {
-            List<NewsFeedItem> newsFeedItem;
+            List<NewsFeedItemDTO> newsFeedItem;
             newsFeedItem = db.GetNewsFeedItemsFromFeedsBySubscriberUserName(tt.userTwo.UserName);
             Assert.IsNotNull(newsFeedItem);
             Assert.IsTrue(newsFeedItem.Count() > 0);
         }
 
         [TestMethod]
-        public void TestNewsFeedItemDbUpdate()
+        public void TestNewsFeedItemBsUpdate()
         {
             string newBody = Guid.NewGuid().ToString();
             tt.userTwoFirstNewsFeedItem.Body = newBody;
             db.Update(tt.userTwoFirstNewsFeedItem);
 
-            NewsFeedItem temp = db.GetByID(tt.userTwoFirstNewsFeedItem.ID);
+            NewsFeedItemDTO temp = db.GetByID(tt.userTwoFirstNewsFeedItem.ID);
 
             Assert.IsNotNull(temp);
 
@@ -122,10 +122,10 @@ namespace NFed.Tests
         }
 
         [TestMethod]
-        public void TestNewsFeedItemDbDelete()
+        public void TestNewsFeedItemBsDelete()
         {
             db.Delete(tt.userThreeFirstNewsFeedItem.ID);
-            NewsFeedItem newsFeedItem;
+            NewsFeedItemDTO newsFeedItem;
             newsFeedItem = db.GetByID(tt.userThreeFirstNewsFeedItem.ID);
             Assert.IsNull(newsFeedItem);
         }

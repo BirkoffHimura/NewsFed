@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,15 +29,23 @@ namespace DAL
         }
         public IEnumerable<User> GetAll()
         {
+            var ret = db.Users.ToList();            
+            return ret;
+        }
+
+        public IEnumerable<User> GetAllWithPass()
+        {
             return db.Users.ToList();
         }
 
         public IEnumerable<User> GetRandom()
         {
-            return db.Users
+            var ret = db.Users
                 .OrderBy(o=> Guid.NewGuid())                
                 .Take(8)
                 .ToList();
+            
+            return ret;
         }
 
         public IEnumerable<User> GetRandom(string userName)
@@ -44,26 +53,32 @@ namespace DAL
             List<string> subs = (from s in db.UserSubscriptions
                                  where s.Sub_ID.UserName == userName
                                  select s.Feed_ID.UserName).ToList<string>();
-            return db.Users
+            var ret = db.Users
                 .OrderBy(o => Guid.NewGuid())
                 .Take(8)
                 .Where(x => x.UserName != userName && !subs.Contains(x.UserName))
                 .ToList();
+            
+            return ret;
         }
         public User GetByID(long Id)
         {
-            return db.Users
+            var ret= db.Users
                 .Include(f => f.Followers)
                 .Include(s => s.Subscriptions)
                 .Where(x => x.ID == Id)
                 .FirstOrDefault();
+            
+            return ret;
         }
         public User GetByUserName(string UserNane)
         {
-            return db.Users.Where(x => x.UserName == UserNane)
+            var ret = db.Users.Where(x => x.UserName == UserNane)
                 .Include(f => f.Followers)
                 .Include(s => s.Subscriptions)
-                .FirstOrDefault();
+                .FirstOrDefault();                        
+
+            return ret;
         }
 
         public int Insert(User user)
@@ -107,10 +122,8 @@ namespace DAL
 
         public int Update(User user)
         {
-            db.Entry(user).State = System.Data.Entity.EntityState.Modified;
-            db.Configuration.ValidateOnSaveEnabled = false;
+            db.Set<User>().AddOrUpdate(user);
             int i = Save();
-            db.Configuration.ValidateOnSaveEnabled = true;
             return i;
         }
 

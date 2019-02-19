@@ -5,15 +5,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AutoMapper;
 
 namespace BLL
 {
     public class NewsFeedItemBs
     {
         private NewsFeedItemDb db;
+        private MappingProfile mp;
         public NewsFeedItemBs()
         {
             db = new NewsFeedItemDb();
+            mp = new MappingProfile();
         }
         public NewsFeedItemBs(bool local)
         {
@@ -25,33 +28,34 @@ namespace BLL
             {
                 db = new NewsFeedItemDb();
             }
+            mp = new MappingProfile();
         }
-        public IEnumerable<NewsFeedItem> GetAll()
+        public IEnumerable<NewsFeedItemDTO> GetAll()
         {
-            return db.GetAll();
+            return Mapper.Map<List<NewsFeedItemDTO>>(db.GetAll());
         }
-        public NewsFeedItem GetByID(long Id)
+        public NewsFeedItemDTO GetByID(long Id)
         {
-            return db.GetByID(Id);
+            return Mapper.Map<NewsFeedItemDTO>(db.GetByID(Id));
         }
-        public List<NewsFeedItem> GetByUserName(string userName)
+        public List<NewsFeedItemDTO> GetByUserName(string userName)
         {
-            return db.GetByUserName(userName);
-        }
-
-        public List<NewsFeedItem> Search(string criteria)
-        {
-            return db.Search(criteria);
+            return Mapper.Map<List<NewsFeedItemDTO>>(db.GetByUserName(userName));
         }
 
-        public List<NewsFeedItem> GetNewsFeedItemsFromFeedsBySubscriberUserName(string userName)
+        public List<NewsFeedItemDTO> Search(string criteria)
         {
-            return db.GetNewsFeedItemsFromFeedsBySubscriberUserName(userName);
+            return Mapper.Map<List<NewsFeedItemDTO>>(db.Search(criteria));
         }
 
-        public int Insert(NewsFeedItem newsFeedItem)
+        public List<NewsFeedItemDTO> GetNewsFeedItemsFromFeedsBySubscriberUserName(string userName)
         {
-            return db.Insert(newsFeedItem);
+            return Mapper.Map<List<NewsFeedItemDTO>>(db.GetNewsFeedItemsFromFeedsBySubscriberUserName(userName));
+        }
+
+        public int Insert(NewsFeedItemDTO newsFeedItem)
+        {
+            return db.Insert(Mapper.Map<NewsFeedItem>(newsFeedItem));
         }
 
         public int Delete(long Id)
@@ -59,9 +63,9 @@ namespace BLL
             return db.Delete(Id);
         }
 
-        public int Update(NewsFeedItem newsFeedItem)
+        public int Update(NewsFeedItemDTO newsFeedItem)
         {
-            return db.Update(newsFeedItem);
+            return db.Update(Mapper.Map<NewsFeedItem>(newsFeedItem));
         }
     }
 }

@@ -1,5 +1,4 @@
 ﻿using BLL;
-using BOL;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -19,7 +18,7 @@ namespace NFed.Areas.Security.Controllers
         }
 
         [HttpPost]
-        public ActionResult Register(User user, HttpPostedFileBase fileUpload)
+        public ActionResult Register(UserDTO user, HttpPostedFileBase fileUpload)
         {
 
             try

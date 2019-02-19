@@ -1,5 +1,4 @@
 ﻿using BLL;
-using BOL;
 using JsonLib;
 using System;
 using System.Collections.Generic;
@@ -58,7 +57,7 @@ namespace NFed.Areas.Common.Controllers
         public ActionResult GetNewsFeedItemsByUserID(long ID)
         {
             UserBs ubs = new UserBs();
-            User user = ubs.GetByID(ID);
+            UserDTO user = ubs.GetByID(ID);
             
             var ret = nfi.GetByUserName(user.UserName);
             JsontResultSet jr = new JsontResultSet
@@ -85,11 +84,11 @@ namespace NFed.Areas.Common.Controllers
             try
             {
                 NewsFeedItemCommentBs cmtBs = new NewsFeedItemCommentBs();
-                NewsFeedItem NewsFeedItem_obj = nfi.GetByID(NewsFeedItem_ID);
+                NewsFeedItemDTO NewsFeedItem_obj = nfi.GetByID(NewsFeedItem_ID);
                 UserBs ubs = new UserBs();
-                User user = ubs.GetByUserName(User.Identity.Name);
-                user.UserName = "";
-                NewsFeedItemComment nfic = new NewsFeedItemComment()
+                UserDTO user = ubs.GetByUserName(User.Identity.Name);
+
+                NewsFeedItemCommentDTO nfic = new NewsFeedItemCommentDTO()
                 {
                     Comment_Body = NewsFeedItem_Comment,
                     CommentDate = DateTime.Now,
@@ -99,7 +98,7 @@ namespace NFed.Areas.Common.Controllers
                     NewsFeedItemID = NewsFeedItem_obj.ID
                 };
 
-                NewsFeedItemComment tmpnfic = new NewsFeedItemComment()
+                NewsFeedItemCommentDTO tmpnfic = new NewsFeedItemCommentDTO()
                 {
                     Comment_Body = NewsFeedItem_Comment,
                     CommentDate = DateTime.Now,
@@ -127,7 +126,7 @@ namespace NFed.Areas.Common.Controllers
         public ActionResult CreateNewsFeedItem(string NewsFeedItem_Title, string NewsFeedItem_Body)
         {            
             UserBs uBs = new UserBs();
-            User user = uBs.GetByUserName(User.Identity.Name);
+            UserDTO user = uBs.GetByUserName(User.Identity.Name);
             string fileNam = string.Empty;
             //string file = Request.Files[Request.Files.Count - 1];
             
@@ -148,7 +147,7 @@ namespace NFed.Areas.Common.Controllers
             string errorMessage = "";
             try
             {
-                NewsFeedItem n = new NewsFeedItem()
+                NewsFeedItemDTO n = new NewsFeedItemDTO()
                 {
                     Title = NewsFeedItem_Title,
                     Body = NewsFeedItem_Body,

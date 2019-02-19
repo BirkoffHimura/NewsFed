@@ -1,5 +1,4 @@
 ﻿using BLL;
-using BOL;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -16,12 +15,12 @@ namespace NFed.Areas.Security.Controllers
         public ActionResult Index()
         {
             UserBs ubs = new UserBs();
-            User user = ubs.GetByUserName(User.Identity.Name);
+            UserDTO user = ubs.GetByUserName(User.Identity.Name);
             return View(user);
         }
 
         [HttpPost]
-        public ActionResult Edit(User user, HttpPostedFileBase fileUpload)
+        public ActionResult Edit(UserDTO user, HttpPostedFileBase fileUpload)
         {
 
             try
@@ -46,14 +45,14 @@ namespace NFed.Areas.Security.Controllers
 
 
                 UserBs uDb = new UserBs();
-                user.AdminAcct = false;
-                user.AllowPost = false;
-                user.SignupDate = DateTime.Now;
-                if (fileNam == string.Empty)
-                {
-                    user.ProfilePic = "noimage.png";
-                }
-                else
+                var utmp = uDb.GetByID(user.ID);
+                user.AdminAcct = utmp.AdminAcct;
+                user.AllowPost = utmp.AllowPost;
+                user.SignupDate = utmp.SignupDate;
+                user.Password = utmp.Password;
+                user.ProfilePic = utmp.ProfilePic;
+
+                if (fileNam != string.Empty)
                 {
                     user.ProfilePic = fileNam;
                 }
